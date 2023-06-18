@@ -1,0 +1,445 @@
+@import url("./utilities.css");
+@import url("./fonts.css");
+@import url("./dashboard.css");
+@import url("./login.css");
+@import url("./pricing.css");
+@import url("./about.css");
+@import url("./event.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.alert-dismissible .btn-close{
+ right: 5rem;
+ width: 30px;
+ height: 30px;
+}
+.navbar{
+  padding: 0 5rem 0 6rem;
+  height: 5.5rem;
+}
+
+.navbar-brand img{
+  width: 110px;
+  height: 55px;
+}
+
+.hero-section{
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+  position: relative;
+  background: url('img/Hero.png') no-repeat center center;
+  text-align: center;
+  justify-content: center;
+  animation: change 20s infinite ease-in-out;
+}
+
+.content{
+  position: absolute;
+  width: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+}
+
+.content a{
+  background: #cccccc;
+  padding: 10px 24px;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 4px;
+}
+
+.content a:hover{
+  background: #7933b1;
+  color: #fff;
+}
+.box{
+  opacity: 0;
+  text-align: center;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.t1{
+  animation: ani1 20s infinite ;
+}
+.t2{
+  animation: ani2 20s infinite ;
+}
+.t3{
+  animation: ani3 20s infinite ;
+}
+
+.abt-card{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.abt-img{
+  width: 544px;
+  height: 343px;
+}
+@keyframes ani1 {
+  0%{
+    opacity: 0;
+  }
+  15%{
+    opacity: 1;
+  }
+  30%{
+    opacity: 0;
+  }
+}
+@keyframes ani2 {
+  30%{
+    opacity: 0;
+  }
+  45%{
+    opacity: 1;
+  }
+  60%{
+    opacity: 0;
+  }
+}
+@keyframes ani3 {
+  60%{
+    opacity: 0;
+  }
+  80%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+@keyframes change{
+  0%{
+    background-image: url(img/Hero.png);
+  }
+  15%{
+    background-image: url(img/hero_2.png);
+  }
+  30%{
+    background-image: url(img/hero_3.png);
+  }
+  45%{
+    background-image: url(img/Hero.png);
+  }
+  60%{
+    background-image: url(img/hero_2.png);
+  }
+  80%{
+    background-image: url(img/hero_3.png);
+  }
+  100%{
+    background-image: url(img/hero_2.png);
+  }
+
+}
+
+
+.alert-text{
+  justify-content: center;
+  align-items: center;
+}
+
+.toggler img{
+  width: 100px;
+  height: 27px;
+}
+
+select{
+  font-size: 10px;
+  color: #555555;
+  font-weight: 600;
+}
+
+.about_heading_text {
+  border-left: 3px solid #7933b1;
+}
+.about_heading_text > span {
+  visibility: hidden;
+}
+.community_heading_text:after {
+  content: "";
+  display: block;
+  position: relative;
+  width: 5%;
+  border: 1px solid #7933b1;
+  text-align: center;
+  margin: 16px auto 24px auto;
+}
+.core_value_list {
+  margin: 0;
+  padding-left: 20px;
+}
+.speaker_image {
+  height: 217px;
+  width: 213px;
+}
+.card {
+  border: none;
+}
+.client_image {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+.client_info {
+  margin: 0;
+  padding: 0;
+  font-size: small;
+}
+.number_logo {
+  width: 30px;
+  height: 30px;
+}
+
+.community_goal {
+  position: relative;
+}
+.goal_image {
+  position: absolute;
+  right: 0px;
+  bottom: 150px;
+}
+.goal-box{
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.goal-card{
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 350px;
+  height: 225px;
+  background: #FFFFFF;
+  border-radius: 16px;
+  padding: 32px 16px 40px;
+}
+
+.mailing_list{
+  width: 650px;
+  height: 370px;
+  box-shadow: 0px 4px 28px rgba(101, 45, 144, 0.1);
+  border-radius: 10px;
+  margin-bottom: -10rem;
+  background-color: #ffffff;
+}
+.mailing_input{
+  justify-content: space-between;
+}
+.mailing_list input{
+  width: 270px
+}
+.mailing_list button{
+  width: 100%;
+}
+.mailing_list p{
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #121212;
+}
+.mailing_desc{
+  font-weight: 400;
+font-size: 16px !important;
+line-height: 27px;
+width: 90%;
+color: #555555;
+}
+
+
+/* Media query for mobile screen */
+@media only screen and (max-width: 768px) {
+  .mailing_list{
+    width: 100%;
+  }
+  .abt-img{
+    width: 100%;
+    height: 300px;
+  }  
+  .navbar {
+    padding: 0;
+    height: 5rem;
+}
+  
+.navbar-toggler{
+  background-color: transparent;
+}
+.navbar-toggler img{
+  width: 30px;
+  height: 30px;
+}
+  
+  /* ABout us mobile  */
+  .reverse {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-right: 0px;
+  }
+
+
+  .about_heading_text {
+    border-left: 0;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    font-weight: 650;
+  }
+  .about_heading_text:after {
+    content: "";
+    display: block;
+    position: relative;
+    width: 10%;
+    border: 1px solid #7933b1;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 5px;
+  }
+  .about_us_mobile {
+    text-align: justify;
+    padding-bottom: 30px;
+  }
+  .about_us_mobile .learn_more {
+    text-align: center;
+  }
+  .community_heading_text:after {
+    width: 10%;
+  }
+  .better_africa {
+    display: flex;
+    justify-content: center;
+  }
+  .better_africa_text {
+    text-align: center;
+  }
+
+  /* Footer mobile */
+  .footer_nav,
+  .more_links,
+  .contacts {
+    padding-top: 1.5rem;
+  }
+}
+
+/* CSS for dark mode */
+@media only screen and (max-width: 375px) {
+  .mailing_list{
+    width: 100%;
+  }
+  .mailing_input{
+    flex-direction: column;
+  }
+  .abt-img{
+    width: 100%;
+    height: 200px;
+  }  
+  
+  
+  /* ABout us mobile  */
+  .reverse {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-right: 0px;
+  }
+
+
+  .about_heading_text {
+    border-left: 0;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    font-weight: 650;
+  }
+  .about_heading_text:after {
+    content: "";
+    display: block;
+    position: relative;
+    width: 10%;
+    border: 1px solid #7933b1;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 5px;
+  }
+  .about_us_mobile {
+    text-align: justify;
+    /* padding: 0; */
+    padding-bottom: 30px;
+    
+  }
+  .about_us_mobile p{
+    font-size: 12px;
+  }
+  .about_us_mobile .learn_more {
+    text-align: center;
+  }
+  .community_heading_text:after {
+    width: 10%;
+  }
+  .better_africa {
+    display: flex;
+    justify-content: center;
+  }
+  .better_africa_text {
+    text-align: center;
+  }
+
+  /* Footer mobile */
+  .footer_nav,
+  .more_links,
+  .contacts {
+    padding-top: 1.5rem;
+  }
+}
+
+
+
+
+
+:root {
+  --primary-color: #121212;
+  --bg-color: #ffffff;
+  --text-color: #343a40;
+
+  --navbar-color: #555555;
+  --alert-bg-color: #f7eeff;
+}
+body {
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+}
+.alert {
+  background-color: var(--alert-bg-color);
+  color: var(--footer-bg-color);
+}
+nav {
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+}
+footer {
+  background-color: var(--footer-bg-color);
+  color: var(--bg-color);
+}
+.dark-mode {
+  --primary-color: #ffffff;
+  --bg-color: #171717;
+  --text-color: #343a40;
+  --footer-bg-color: #e4d6ef;
+  --navbar-color: #cccccc;
+  --alert-bg-color: #ead6ef;
+}
