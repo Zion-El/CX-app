@@ -11,6 +11,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+body{
+  overflow-x: hidden;
+}
 
 .alert-dismissible .btn-close{
  right: 5rem;
@@ -337,8 +340,107 @@ color: #555555;
   }
 }
 
-@media screen  {
-  
+@media screen and (max-width: 425px) {
+  .x-toggler{
+    position: absolute;
+    top:10px;
+    right: 4rem;
+  }
+  .x-toggler img{
+    width: 80px;
+    height: 25px;
+  }
+  .navbar{
+    padding: 0 .5rem;
+    height: 3rem;
+  }
+  .navbar-brand img{
+    width: 100px;
+    height: 40px;
+  }
+
+
+  .goal-carousel .carousel-indicators{
+    position: relative !important;
+  }
+  .carousel-inner{
+    width: 100%;
+    margin: auto;
+    padding: 0 2rem;
+  }
+  .goal-carousel .carousel-item{
+    border: 1px solid #A677CB;
+    border-radius: 16px;
+    width: 95%;
+    position: relative;
+  }
+  .goal-carousel .carousel-item p{
+    font-size: 12px;
+  }
+  .goal-carousel .carousel-indicators button{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid #A677CB;
+  }
+  .goal-carousel .carousel-indicators .active{
+    background:  #A677CB;
+  }
+  .goal-btn span{
+    color: #7933b1;
+  }
+  .goal-card{
+    width: 100%;
+  }
+  .events p{
+    font-size: 14px;
+  }
+  .up-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .better_africa img{
+    width: 80%;
+    height: 50vh;
+  }
+
+  .up-title, .up-topic{
+    text-align: center;
+  }
+  .speaker_image{
+    width: 140px;
+    height: 160px;
+  }
+  .speaker_details h6{
+    font-size: 16px;
+  }
+  .speaker_details p{
+    font-size: 12px;
+    line-height: 0px;
+    margin-bottom: 5px;
+  }
+  .speaker_details img{
+    height: 14px;
+    margin-right: 8px !important;
+  }
+  .speaker_details button{
+    padding: 8px 20px;
+    font-size: 12px;
+    margin-top: -20px;
+  }
+  .testimonial{
+    width: 100%;
+  }
+  .test-desc{
+    font-size: 12px;
+    width: 80%;
+    margin: 0;
+  }
+  .card-body p{
+    font-size: 12px;
+  }
 }
 
 
