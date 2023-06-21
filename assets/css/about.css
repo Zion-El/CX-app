@@ -593,7 +593,7 @@ margin:5px;
 	}
 	.about-hero-img img{
 		width: 100%;
-		height: 50vh;
+		height: 35vh;
 	}
 	.aboutban_content {
 		padding-left: 0rem;
@@ -739,7 +739,13 @@ margin:5px;
 		font-size: 12px;
 	}
 }
-
+@media screen and (max-width: 440px) {
+	.about-hero-img img{
+		width: 100%;
+		height: 35vh;
+		margin-top: 20px;
+	}
+}
 @media screen and (max-width: 375px) {
 	.about-hero-img img{
 		width: 100%;
@@ -747,7 +753,7 @@ margin:5px;
 		margin-top: 20px;
 	}
 }
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 360px) {
 	.about-hero-img img{
 		width: 100%;
 		height: 40vh;
