@@ -636,7 +636,7 @@ margin:5px;
 
 @media screen and (max-width: 425px) {
 	.about-hero{
-		height: 43rem;
+		height: 45rem;
 		padding-left: 0rem;
 		/* padding-right: 0; */
 	}
@@ -744,5 +744,13 @@ margin:5px;
 	.about-hero-img img{
 		width: 100%;
 		height: 48vh;
+		margin-top: 20px;
+	}
+}
+@media screen and (max-width: 350px) {
+	.about-hero-img img{
+		width: 100%;
+		height: 40vh;
+		margin-top: 20px;
 	}
 }
