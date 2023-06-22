@@ -15,6 +15,7 @@ body{
   overflow-x: hidden;
 }
 
+
 .alert-dismissible .btn-close{
  right: 5rem;
  width: 30px;
@@ -43,45 +44,32 @@ body{
 
 .content{
   position: absolute;
-  width: 50%;
-  top: 50%;
+  width: 100%;
+  top: 70%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 100%);
   color: #ffffff;
+}
+.box p{
+  margin-top: 2rem;
 }
 
 .hero-section a{
-  background: #cccccc;
   padding: 10px 24px;
   text-decoration: none;
   font-size: 18px;
   border-radius: 4px;
-  margin-top: 80vh;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, 100%);
 }
 
 .hero-section a:hover{
   background: #7933b1;
   color: #fff;
 }
-.box{
-  opacity: 0;
-  text-align: center;
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 
-.t1{
-  animation: ani1 20s infinite ;
-}
-.t2{
-  animation: ani2 20s infinite ;
-}
-.t3{
-  animation: ani3 20s infinite ;
-}
 
 .abt-card{
   display: flex;
@@ -92,39 +80,6 @@ body{
 .abt-img{
   width: 544px;
   height: 343px;
-}
-@keyframes ani1 {
-  0%{
-    opacity: 0;
-  }
-  15%{
-    opacity: 1;
-  }
-  30%{
-    opacity: 0;
-  }
-}
-@keyframes ani2 {
-  30%{
-    opacity: 0;
-  }
-  45%{
-    opacity: 1;
-  }
-  60%{
-    opacity: 0;
-  }
-}
-@keyframes ani3 {
-  60%{
-    opacity: 0;
-  }
-  80%{
-    opacity: 1;
-  }
-  100%{
-    opacity: 0;
-  }
 }
 
 @keyframes change{
@@ -150,8 +105,51 @@ body{
     background-image: url(img/hero_2.png);
   }
 
+} 
+
+
+.hero-section .home-text{
+  text-align: center;
+  position: relative;
+  z-index: 2;
 }
 
+.hero-section .home-text .content{
+	margin:0;
+	overflow: hidden;
+}
+.hero-section .home-text .content .box{
+    color:#fff;
+    background-color: transparent;
+    display: inline-block;
+    display: none;
+}
+
+.hero-section .home-text .content .box.text-in{
+	display: block;
+	animation: textIn .5s ease;
+}
+.hero-section .home-text .content .box.text-out{
+	animation: textOut .5s ease;
+}
+
+@keyframes textIn{
+	0%{
+		transform: translateY(100%);
+	}
+	100%{
+		transform: translateY(0%);
+	}
+}
+@keyframes textOut{
+	0%{
+		transform: translateY(0%);
+	}
+	100%{
+		transform: translateY(-100%);
+
+	}
+}
 
 .alert-text{
   justify-content: center;
@@ -241,8 +239,9 @@ select{
   height: 370px;
   box-shadow: 0px 4px 28px rgba(101, 45, 144, 0.1);
   border-radius: 10px;
-  margin-bottom: -10rem;
+  /* margin-bottom: -5rem; */
   background-color: #ffffff;
+  z-index: 99;
 }
 .mailing_input{
   justify-content: space-between;
@@ -271,7 +270,7 @@ color: #555555;
 /* Media query for mobile screen */
 @media only screen and (max-width: 768px) {
   .mailing_list{
-    width: 100%;
+    width: 90%;
   }
   .abt-img{
     width: 100%;
@@ -342,6 +341,14 @@ color: #555555;
 }
 
 @media screen and (max-width: 425px) {
+  .hero-section a{
+    width: 60%;
+    margin-top: 5rem;
+  }
+  .box p{
+    width: 80%;
+    margin: 2rem auto;
+  }
   .content{
     width: 90%;
   }
@@ -423,7 +430,7 @@ color: #555555;
 /* CSS for dark mode */
 @media only screen and (max-width: 375px) {
   .mailing_list{
-    width: 100%;
+    width: 90%;
   }
   .mailing_input{
     flex-direction: column;

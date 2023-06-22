@@ -149,28 +149,38 @@
 
     <!-- Hero section Starts -->
     <section class="hero-section">
-      <div class="content">
-        <div class="box t1">
-          <h1>Unlocking the power of customer experience<br />
-          for your business success</h1>
-          <p>Every business success is measured by Customer value and the<br />
-          experience at every touch point from discovery to delivery.</p>
+      <div class="container">
+        <div class="row">
+            <div class="home-text">
+                    <div class="content">
+                      <div class="box t1">
+                        <h1>Unlocking the power of customer experience<br />
+                        for your business success</h1>
+                        <p>Every business success is measured by Customer value and the<br />
+                        experience at every touch point from discovery to delivery.</p>
+                      </div>
+                      <div class="box t2">
+                        <h1>Delivering Unforgettable Experiences<br />
+                          Through CX Excellence</h1>
+                        <p>Every business success is measured by Customer value and the<br />
+                        experience at every touch point from discovery to delivery.</p>
+                      </div>
+                      <div class="box t3">
+                          <h1>Elevate Your Customer Experience<br />
+                            to new heights</h1>
+                          <p>Every business success is measured by Customer value and the<br />
+                          experience at every touch point from discovery to delivery.</p>
+                          
+                      </div>   
+                    </div>
+
+            </div>
         </div>
-        <div class="box t2">
-          <h1>Delivering Unforgettable Experiences<br />
-            Through CX Excellence</h1>
-          <p>Every business success is measured by Customer value and the<br />
-          experience at every touch point from discovery to delivery.</p>
-        </div>
-        <div class="box t3">
-            <h1>Elevate Your Customer Experience<br />
-              to new heights</h1>
-            <p>Every business success is measured by Customer value and the<br />
-            experience at every touch point from discovery to delivery.</p>
-            
-        </div>   
-      </div>
-      <a href="#">Join the Community</a>
+     </div>
+
+
+
+      <a href="#" class="btn_sec text-capitalize">Join the Community</a>
 
     </section>
 
@@ -1017,7 +1027,7 @@
     <!-- Mailinglist section ends -->
 
     <!-- Footer Starts -->
-    <footer style="background: #2a2a2a" class="pt-2">
+    <footer style="background: #2a2a2a" class="footer pt-2 z-n1">
       <div class="container pt-5 text-white">
         <div class="row mt-5">
           <div class="col-lg-4">
@@ -1112,6 +1122,41 @@
   <script src="assets/js/bootstrap.min.js"></script>
   <script src="assets/js/fontawesome.min.js"></script>
   <script src="assets/js/main.js"></script>
+
+
+  <script>
+    const txts=document.querySelector(".content").children,
+          txtsLen=txts.length;
+      let index=0;
+     const textInTimer=4000,
+           textOutTimer=3800;
+
+    function animateText() {
+       for(let i=0; i<txtsLen; i++){
+         txts[i].classList.remove("text-in","text-out");  
+       }
+       txts[index].classList.add("text-in");
+
+       setTimeout(function(){
+           txts[index].classList.add("text-out");              
+       },textOutTimer)
+
+       setTimeout(function(){
+
+         if(index == txtsLen-1){
+             index=0;
+           }
+          else{
+              index++;
+            }
+           animateText();
+       },textInTimer); 
+    }
+    
+    window.onload=animateText;
+
+</script>
+
 </html>
 
 <!-- DARK MODE -->
